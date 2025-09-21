@@ -30,7 +30,7 @@ const Sidebar = ({ user }) => {
       </Link>
 
       {/* Main Container */}
-      <div className="flex-grow flex flex-col overflow-hidden rounded-lg border border-gray-800">
+      <div className="flex-grow flex flex-col overflow-hidden rounded-lg border-2 border-gray-700">
         {/* History Section */}
         <div className="p-4 flex-1 overflow-clip border-b border-gray-700">
           <h3 className="font-semibold font-[font1] tracking-wide mb-3">History</h3>

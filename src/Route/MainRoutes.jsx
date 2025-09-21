@@ -2,24 +2,32 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
-import Home from "../Pages/Home";
 import Dashboard from "../Pages/Dashboard/Dashboard";
-import Space from "../Pages/Space";
-
+import About from "../Pages/About";
+import Upload from "../Pages/Dashboard/Upload"
+import Quiz from "../Pages/Dashboard/Quiz"
+import ImageGenerator from "../Pages/Dashboard/ImageGenerator";
+import GraphGenerator from "../Pages/Dashboard/GraphGenerator";
+import GamifiedLearning from "../Pages/Dashboard/GamifiedLearning";
 const MainRoutes = () => {
   return (
-    <div className="w-screen h-screen relative overflow-x-hidden overflow-hidden">  
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/galaxy" element={<Space />} />
-        </Routes>
+    <div className="w-screen h-screen relative overflow-hidden">
+      <Routes>
+        {/* <Route path="/home" element={<Home1 />} /> */}
+        <Route path="/" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/image-generator" element={<ImageGenerator />} />
+        <Route path="/graph-generator" element={<GraphGenerator />} />
+        <Route path="/quiz" element={<Quiz/>} />
+        <Route path="/gamified-learning" element={<GamifiedLearning />} />
+      </Routes>
     </div>
   );
 };
 
 export default MainRoutes;
 
-      // <div className="absolute w-full h-full z-10">
+// <div className="absolute w-full h-full z-10">
