@@ -8,9 +8,10 @@ const App = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000, // animation duration
-      easing: "ease-in-out", // easing style
+      // easing: "ease-in-out", // easing style
       once: false, // repeat animation jab scroll back karo
     });
+    AOS.refresh();
   }, []);
   return (
     <div className="relative">
