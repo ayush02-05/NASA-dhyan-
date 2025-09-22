@@ -5,7 +5,7 @@ import svg from "../../assets/search.svg";
 
 const Nav = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const [toggle1, setToggle1] = useState(false);
   const [toggle2, setToggle2] = useState(false);
   const [toggle3, setToggle3] = useState(false);
@@ -51,40 +51,46 @@ const Nav = () => {
   return (
     <div>
       <div className="absolute top-0 w-380 z-50 h-17 text-white flex items-center px-8 py-4 justify-between shadow-xl bg-gradient-to-br backdrop-blur-sm border-b-zinc-700 border-b-1 font-[font1] text-lg tracking-wide">
-        {/* Explore */}
-        <button
-          onClick={() => {
-            handleDropdownToggle("explore"), setToggle1(!toggle1);
-          }}
-          className="flex items-center space-x-2 font-bold text-lg"
-        >
-          <span>Explore</span>
-          {openDropdown === "explore" ? <ChevronUpIcon /> : <ChevronDownIcon />}
-        </button>
-
-        <div className="flex items-center">
-          <svg
-            className="w-5 h-5 absolute left-39 text-white"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns={svg}
+        <div className="flex items-center gap-30 mr-20">
+          {/* Explore */}
+          <button
+            onClick={() => {
+              handleDropdownToggle("explore"), setToggle1(!toggle1);
+            }}
+            className="flex items-center space-x-2 font-bold text-lg"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            ></path>
-          </svg>
-          <input
-            className="border-2 border-gray-500 rounded-lg pl-9 pr-4 py-1 scale-90 active:border-2 font-[font2] ml-[-100px]"
-            type="text"
-          />
+            <span>Explore</span>
+            {openDropdown === "explore" ? (
+              <ChevronUpIcon />
+            ) : (
+              <ChevronDownIcon />
+            )}
+          </button>
+
+          <div className="flex items-center">
+            <svg
+              className="w-5 h-5 absolute left-39 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns={svg}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+            <input
+              className="border-2 border-gray-500 rounded-lg pl-9 pr-4 py-1 scale-90 active:border-2 font-[font2] ml-[-100px]"
+              type="text"
+            />
+          </div>
         </div>
 
         {/* LOGO */}
-        <div id="logo" className="w-10 ml-[25%] text-white">
+        <div id="logo" className="w-10  text-white">
           <img src={logo} alt="" />
         </div>
 

@@ -4,6 +4,7 @@ import DNA from "../components/Planets/DNA";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Home2 from "./Home/Home2";
+import Home3 from "./Home/Home3";
 
 const About = () => {
   return (
